@@ -9,9 +9,9 @@ app.get("/convert/celcius/:celcius", (request, response) => {
     // tampung data
     let celcius = request.params.celcius
 
-    let fahrenheit = (suhu * 9/5) + 32
-    let kelvin = suhu + 273.15
-    let reamur = suhu * 4/5
+    let fahrenheit = (celcius * 9/5) + 32
+    let kelvin = celcius + 273.15
+    let reamur = celcius * 4/5
 
     return response.json({
         celcius: celcius,
